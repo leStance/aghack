@@ -982,25 +982,28 @@ console.log("BOOSTER V1 LAUNCHER");
         var botString = window.botList[botIndex].displayText();
 
         var debugStrings = [];
-        debugStrings.push("Bot: " + window.botList[botIndex].name);
-        debugStrings.push("Launcher: AposLauncher " + aposLauncherVersion);
-        debugStrings.push("T - Bot: " + (!toggle ? "On" : "Off"));
-        debugStrings.push("R - Lines: " + (!toggleDraw ? "On" : "Off"));
+        debugStrings.push("" + window.botList[botIndex].name);
+        debugStrings.push("BOOSTER V1 LAUNCHER " + aposLauncherVersion);
+        debugStrings.push("[T] - Aktiviere den Hack: " + (!toggle ? "AN" : "AUS"));
+	debugStrings.push("[R] - Zeige die Linien: " + (!toggleDraw ? "AN" : "AUS"));
+	debugStrings.push("[F] - Masse Anzeigen: " + (!toggleDraw ? "AN" : "AUS"));
+	debugStrings.push("[D] - Aktiviere den Schwarzen Modus: " + (!toggleDraw ? "AN" : "AUS"));
+	debugStrings.push("[ESC] - Einstellungen für Agar.IO ");
 
         for (var i = 0; i < botString.length; i++) {
             debugStrings.push(botString[i]);
         }
 
         debugStrings.push("");
-        debugStrings.push("Best Score: " + ~~(sessionScore / 100));
-        debugStrings.push("Best Time: " + bestTime + " seconds");
+        debugStrings.push("BESTER SCORE: " + ~~(sessionScore / 100));
+        debugStrings.push("BESTE ZEIT" " + bestTime + " seconds");
         debugStrings.push("");
         debugStrings.push(serverIP);
 
         if (getPlayer().length > 0) {
             var offsetX = -getMapStartX();
             var offsetY = -getMapStartY();
-            debugStrings.push("Location: " + Math.floor(getPlayer()[0].x + offsetX) + ", " + Math.floor(getPlayer()[0].y + offsetY));
+            debugStrings.push("KORDINATEN: " + Math.floor(getPlayer()[0].x + offsetX) + ", " + Math.floor(getPlayer()[0].y + offsetY));
         }
 
         var offsetValue = 20;
@@ -1089,7 +1092,7 @@ console.log("BOOSTER V1 LAUNCHER");
                     1;
                 a.fillStyle = "#FFFFFF";
                 c = null;
-                c = Z("leaderboard");
+                c = Z("DIE BESTEN");
                 a.font = "30px Ubuntu";
                 a.fillText(c, 100 - a.measureText(c).width / 2, 40);
                 if (null == A)
