@@ -121,7 +121,7 @@ function AposBot() {
     };
 
     this.displayText = function() {
-        return ["Q - Folge deiner Maus: " + (this.toggleFollow ? "Aus" : "An")];
+        return ["[Q] - Folge deiner Maus: " + (this.toggleFollow ? "AUS" : "AN")];
     };
 
     this.splitDistance = 710;
