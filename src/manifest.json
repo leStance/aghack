@@ -1,0 +1,41 @@
+{
+	"manifest_version":2,
+	"name":"Agar.io Bot",
+	"short_name":"LioBot",
+	"description":"This Agario Bot has feelings and learns to play better so please don't lump it together with meaningless agar.io hacks or cheats.",
+	"icons":{"128":"agario_ai_icon_2.png"},
+	"version":"1.9.552",
+	"content_scripts": [
+		{
+			"matches":["http://agar.io/"],
+			"js":["injector.js"],
+			"run_at":"document_start"
+		},
+		{
+			"matches":["http://agar.io/"],
+			"css":["style.css"],
+			"js":[
+				"ext/md5.min.js",
+				"ext/jquery.js",
+				"ext/Chart.js",
+				"ext/bootstrap.min.js",
+				"Ai.js",
+				"main_out_551v2.js",
+				"mod_framework.js",
+				"ga-config.js",
+				"ga.js",
+				"js15_as.js",
+				"script.js"
+			],
+			"run_at":"document_end"
+		}
+	],
+	"permissions":[
+		"http://m.agar.io/*",
+		"storage",
+		"unlimitedStorage"
+	],
+	"web_accessible_resources":[
+		"prepend.js"
+	]
+}
